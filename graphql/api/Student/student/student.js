@@ -6,12 +6,33 @@ export default {
     getAllStudent: async (_, args) => {
       try {
         const result = await Student.find({}, {});
+        // find({},{특별히 조회할 애를 넣는 곳 넣을 것이 있으면 !})
 
         return result;
       } catch (e) {
         console.log(e);
         return [];
       }
+    },
+    Mutation: {
+      createStudent: async (_, args) => {
+        try {
+          const { name, age, school, gender, regeon } = args;
+
+          const result = await Student.create({
+            name,
+            age,
+            school,
+            gender,
+            regeon,
+          });
+          console.log(result);
+          return true;
+        } catch (e) {
+          console.log(e);
+          return false;
+        }
+      },
     },
   },
 };
