@@ -26,6 +26,7 @@ export default {
             gender,
             regeon,
           });
+          console.log(result);
 
           return true;
         } catch (e) {
@@ -36,7 +37,28 @@ export default {
       deleteStudent: async (_, args) => {
         try {
           const result = await Student.deleteOne({ _id: id });
+          console.log(result);
 
+          return true;
+        } catch (e) {
+          console.log(e);
+          return false;
+        }
+      },
+      updateStudent: async (_, args) => {
+        try {
+          const result = await Student.updateOne(
+            { _id: id },
+            {
+              $set: {
+                age,
+                school,
+                regeon,
+              },
+            }
+          );
+          // find({},{특별히 조회할 애를 넣는 곳 넣을 것이 있으면 !})
+          console.log(result);
           return true;
         } catch (e) {
           console.log(e);

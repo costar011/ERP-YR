@@ -12,10 +12,5 @@ type Mutation {
   ): Boolean
 
   deleteStudent(id: String!): Boolean!
-  updateStudent(
-    name: String!
-    age: String!
-    school: String!
-    regeon: String!
-  ): Boolean!
+  updateStudent(age: String!, school: String!, regeon: String!): Boolean!
 }
