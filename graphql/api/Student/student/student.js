@@ -14,25 +14,5 @@ export default {
         return [];
       }
     },
-    Mutation: {
-      createStudent: async (_, args) => {
-        try {
-          const { name, age, school, gender, regeon } = args;
-
-          const result = await Student.create({
-            name,
-            age,
-            school,
-            gender,
-            regeon,
-          });
-          console.log(result);
-          return true;
-        } catch (e) {
-          console.log(e);
-          return false;
-        }
-      },
-    },
   },
 };
