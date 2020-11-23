@@ -14,5 +14,35 @@ export default {
         return [];
       }
     },
+    Mutation: {
+      createStudent: async (_, args) => {
+        try {
+          const { name, age, school, gender, regeon } = args;
+
+          const result = await Student.create({
+            name,
+            age,
+            school,
+            gender,
+            regeon,
+          });
+
+          return true;
+        } catch (e) {
+          console.log(e);
+          return false;
+        }
+      },
+      deleteStudent: async (_, args) => {
+        try {
+          const result = await Student.deleteOne({ _id: id });
+
+          return true;
+        } catch (e) {
+          console.log(e);
+          return false;
+        }
+      },
+    },
   },
 };
