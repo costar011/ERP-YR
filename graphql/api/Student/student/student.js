@@ -47,8 +47,7 @@ export default {
         }
       },
       updateStudent: async (_, args) => {
-        const { id } = args;
-        const { age, school, regeon } = args;
+        const { id, age, school, regeon } = args;
 
         try {
           const result = await Student.updateOne(
