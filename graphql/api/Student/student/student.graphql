@@ -9,7 +9,7 @@ type Mutation {
     school: String!
     gender: String!
     regeon: String!
-  ): Boolean
+  ): Boolean!
 
   deleteStudent(id: String!): Boolean!
   updateStudent(age: String!, school: String!, regeon: String!): Boolean!

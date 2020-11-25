@@ -47,6 +47,7 @@ export default {
       },
       updateStudent: async (_, args) => {
         try {
+          const { age, school, regeon } = args;
           const result = await Student.updateOne(
             { _id: id },
             {
