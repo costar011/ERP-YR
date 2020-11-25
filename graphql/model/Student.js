@@ -9,7 +9,7 @@ const Student = new Schema( // Student 라는 상수에 스키마를 만듬
       required: true,
     },
     age: {
-      type: String,
+      type: Number,
       required: true,
     },
     school: {
