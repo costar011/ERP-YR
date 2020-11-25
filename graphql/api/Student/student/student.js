@@ -16,9 +16,8 @@ export default {
     },
     Mutation: {
       createStudent: async (_, args) => {
+        const { name, age, school, gender, regeon } = args;
         try {
-          const { name, age, school, gender, regeon } = args;
-
           const result = await Student.create({
             name,
             age,
@@ -49,9 +48,9 @@ export default {
       },
       updateStudent: async (_, args) => {
         const { id } = args;
+        const { age, school, regeon } = args;
 
         try {
-          const { age, school, regeon } = args;
           const result = await Student.updateOne(
             { _id: id },
             {
