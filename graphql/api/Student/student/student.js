@@ -8,6 +8,7 @@ export default {
         const result = await Student.find({}, {});
         // find({},{특별히 조회할 애를 넣는 곳 넣을 것이 있으면 !})
 
+        console.log(result);
         return result;
       } catch (e) {
         console.log(e);
