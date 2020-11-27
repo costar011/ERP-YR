@@ -15,25 +15,25 @@ export default {
         return [];
       }
     },
-    Mutation: {
-      // updata , delete 는 query가 아니기 때문에 Mutation으로 가야함.
-      createStudent: async (_, args) => {
-        const { name, age, school, gender, regeon } = args;
-        try {
-          const result = await Student.create({
-            name,
-            age,
-            school,
-            gender,
-            regeon,
-          });
-          console.log(result);
-          return true;
-        } catch (e) {
-          console.log(e);
-          return false;
-        }
-      },
+  },
+  Mutation: {
+    // updata , delete 는 query가 아니기 때문에 Mutation으로 가야함.
+    createStudent: async (_, args) => {
+      const { name, age, school, gender, regeon } = args;
+      try {
+        const result = await Student.create({
+          name,
+          age,
+          school,
+          gender,
+          regeon,
+        });
+        console.log(result);
+        return true;
+      } catch (e) {
+        console.log(e);
+        return false;
+      }
     },
   },
 };
