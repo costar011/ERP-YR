@@ -6,3 +6,5 @@ type Student {
   gender: String!
   regeon: String!
 }
+
+type
