@@ -35,5 +35,17 @@ export default {
         return false;
       }
     },
+    deleteStudent: async (_, args) => {
+      const { id } = args;
+
+      try {
+        const result = await Student.deleteOne({ _id: id });
+
+        return true;
+      } catch (e) {
+        console.log(e);
+        return false;
+      }
+    },
   },
 };
