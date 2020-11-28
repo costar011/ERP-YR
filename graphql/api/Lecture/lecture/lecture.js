@@ -1,5 +1,7 @@
 import Lecture from "../../../model/Lecture";
 
 export default {
-  Query:
+  Query: {
+    getAllLecture: async(),
+  },
 };
